@@ -3,7 +3,7 @@
 In this project, I am building a machine learning model that can predict the gas uptake (carbon dioxide and methane) of metal-organic frameworks (MOFs), which are crystalline materials consisting of inorganic metal nodes linked by organic linkers. The discovery of MOFs for carbon capture is needed for emission reduction technologies, as these materials can efficiently adsorb and store greenhouse gases like CO2.
 Machine learning accelerates this discovery process by enabling the prediction of gas uptake properties from structural and chemical descriptors, reducing the need for time-consuming and costly experiments or simulations.
 <p align="center">
-  <img src="Images/mof_building_principle.png" alt="Experimental setup" width="90%">
+  <img src="images/mof_building_principle.png" alt="Experimental setup" width="90%">
 
 # Main Goals:
 - Exploratory data analysis (EDA) to understand the meaningful features and descriptors of MOFs for predicting the CO2 uptake at low/high pressure.
@@ -27,3 +27,5 @@ Initial train.csv → 80/20 split
 Baseline val score (R2) - untuned model, all features = 0.67 to 0.68
 
 ## Pipeline
+<p align="center">
+  <img src="images/pipeline.png" alt="Experimental setup" width="90%">
