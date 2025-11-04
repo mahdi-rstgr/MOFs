@@ -28,4 +28,4 @@ Baseline val score (R2) - untuned model, all features = 0.67 to 0.68
 
 ## Pipeline
 <p align="center">
-  <img src="images/pipeline.png" alt="Experimental setup" width="70%">
+  <img src="images/Pipeline.png" width="70%">
