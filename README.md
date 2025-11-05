@@ -1,6 +1,7 @@
 # MOFs: Machine learning for discovery of MOFs for gas separation applications
 
-In this project, I am building a machine learning model that can predict the gas uptake (carbon dioxide and methane) of metal-organic frameworks (MOFs), which are crystalline materials consisting of inorganic metal nodes linked by organic linkers. The discovery of MOFs for carbon capture is needed for emission reduction technologies, as these materials can efficiently adsorb and store greenhouse gases like CO2.
+MOFs are a class of porous crystalline nanomaterial that show incredible promise for carbon capture applications. This is because their geometry (the shape of their pores) can be tuned for specific applications during synthesis. By selecting different combinations of metal nodes and organic linkers, MOFs can be customized to adsorb specific molecules (like CO₂) and let others pass through. While this is very exciting, it is difficult to find the ideal MOF for a task because of the size of the design space - there are a nearly infinite number of linker-metal combinations. This is why data-driven discovery techniques have become so popular in the MOF field.
+
 Machine learning accelerates this discovery process by enabling the prediction of gas uptake properties from structural and chemical descriptors, reducing the need for time-consuming and costly experiments or simulations.
 <p align="center">
   <img src="images/mof_building_principle.png" alt="Experimental setup" width="60%">
@@ -13,6 +14,21 @@ Machine learning accelerates this discovery process by enabling the prediction o
 - The dataset used in this project originates from the publication "Understanding the diversity of the metal-organic framework ecosystem", which explores the application of machine learning for predicting gas adsorption properties in MOFs. This dataset contains geometric and chemical descriptors, as well as simulated gas uptake values, enabling the development and evaluation of regression models for materials discovery.
 - Number of data points: ~ 5,000
 - Number of features: ~ 300
+- As descriptors, I will use pore geometric descriptors, such as density, pore volume, etc., and revised autocorrelation functions (RACs) for describing the chemistry of MOFs. The dataset has four properties for MOFs:
+  - CO2 uptake at 0.15 bar and 298K
+  - CO2 uptake at 16 bar and 298K
+  - CH4 uptake at 5.8 bar and 298K
+  - CH4 uptake at 65 bar and 298K
+- Examples for pore geometry descriptors (in - geometric_descriptors) to characterize include:
+  - Di: size of the largest included sphere
+  - Df: largest free sphere
+  - Dif: largest included free sphere
+  - Surface area (SA) of the pore
+  - Probe-occupiable pore volume (POV).
+ 
+RACs (in the lists starting with summed_...) operate on the structure graph and encode information about the metal center, linkers and the functional groups as differences or products of heuristics that are relevant for inorganic chemistry, such as electronegativity (X), connectivity (T), identity (I), covalent radii (S), and nuclear charge (Z).
+<p align="center">
+  <img src="images/Pipeline.png" width="70%">
 
 # Model of Choice:
 XGBoost
