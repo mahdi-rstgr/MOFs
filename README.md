@@ -28,7 +28,7 @@ Machine learning accelerates this discovery process by enabling the prediction o
  
 RACs (in the lists starting with summed_...) operate on the structure graph and encode information about the metal center, linkers and the functional groups as differences or products of heuristics that are relevant for inorganic chemistry, such as electronegativity (X), connectivity (T), identity (I), covalent radii (S), and nuclear charge (Z).
 <p align="center">
-  <img src="images/Pipeline.png" width="70%">
+  <img src="images/racs.png" width="70%">
 
 # Model of Choice:
 XGBoost
