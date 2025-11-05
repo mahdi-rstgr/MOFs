@@ -1,6 +1,6 @@
 # MOFs: Machine learning for discovery of MOFs for gas separation applications
 
-MOFs are a class of porous crystalline nanomaterial that show incredible promise for carbon capture applications. This is because their geometry (the shape of their pores) can be tuned for specific applications during synthesis. By selecting different combinations of metal nodes and organic linkers, MOFs can be customized to adsorb specific molecules (like CO₂) and let others pass through. While this is very exciting, it is difficult to find the ideal MOF for a task because of the size of the design space - there are a nearly infinite number of linker-metal combinations. This is why data-driven discovery techniques have become so popular in the MOF field.
+MOFs are a class of porous crystalline nanomaterials that show incredible promise for carbon capture applications. This is because their geometry (the shape of their pores) can be tuned for specific applications during synthesis. By selecting different combinations of metal nodes and organic linkers, MOFs can be customized to adsorb specific molecules (like CO₂) and let others pass through. While this is very exciting, it is difficult to find the ideal MOF for a task because of the size of the design space - there are nearly an infinite number of linker-metal combinations. This is why data-driven discovery techniques have become so popular in the MOF field.
 
 Machine learning accelerates this discovery process by enabling the prediction of gas uptake properties from structural and chemical descriptors, reducing the need for time-consuming and costly experiments or simulations.
 <p align="center">
@@ -74,3 +74,13 @@ There are ~300 features, with N = 5,000 data points
 - Objective function: Negative MAE
 - Optimizer: Gaussian Process (GP)
 - For faster hyperparameter tuning, a random subset of training data (40%) was used
+
+
+# Results
+The convergence of Bayesian Optimization (BO) is shown here:
+<p align="center">
+  <img src="images/Bayesian_optimization_convergence.png" width="70%">
+
+Based on the optimization, the 15 important parameters are as follows:
+<p align="center">
+  <img src="images/Important_Features.png" width="70%">
